@@ -30,20 +30,6 @@ class MyLoginView(View):
         else:
             return render(request, 'main/login.html', {'form': form})
 
-""""
-class SingUpView(View):
-    def  get(self, request):
-        form = SignUpForm
-        return render(request, 'main/registration.html', {'form': form})
-
-    def post(self, request):
-        form = SignUpForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('/')
-        else:
-            return render(request, 'main/registration.html', {'form': form})
-"""
 
 def logout_view(request):
     logout(request)
